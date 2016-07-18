@@ -17,14 +17,13 @@
   }
 
   .modify th, .modify td {
-    padding-right: 28px;
-    font-size: 13px;
+    padding-right: 10px;
+    font-size: 14px;
     letter-spacing: 1px;
     padding-top: 6px;
     padding-bottom: 6px;
     text-align: center;
   }
-
  .modify td:first-child,th:first-child {
     padding-left: 10px;
   }
