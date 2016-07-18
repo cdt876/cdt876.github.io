@@ -24,6 +24,9 @@
     padding-bottom: 6px;
     text-align: center;
   }
+  .modify th{
+    font-size:14px;
+  }
  .modify td:first-child,th:first-child {
     padding-left: 10px;
   }
