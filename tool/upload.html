@@ -1,0 +1,179 @@
+<!DOCTYPE PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <title>GSA File Manager</title>
+
+        <!--BEGIN STYLESHEET/SCRIPT-->
+        <!--LOAD THREE STYLESHEETS, 1 COMMON, 1 FOR NETSCAPE, 1 FOR IE-->
+<!--        <link rel="stylesheet" type="text/css" href="/images/w3/v6/css/w3_common.css" />
+        <link rel="stylesheet" type="text/css" href="/images/w3/v6/css/w3_netscape.css" disabled />
+-->
+        <script language="JavaScript1.2" type="text/javascript">
+        <!--
+//                if (document.all) document.createStyleSheet("/images/w3/v6/css/w3_ie.css");
+        //-->
+        </script>
+        <!--END STYLESHEET/SCRIPT-->
+</head>
+
+<body bgcolor="#FFFFFF" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0">
+
+<!--BEGIN CONTENT SHELL-->
+<CENTER>
+                        <script type="text/javaScript" src="/ui/v8/scripts/scripts.js"></script>
+<SCRIPT SRC="/gsatools/Cookies.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+function getBrowse(element) {
+  var brsWin = window.open('', 'ausgsaBrowseTop', 'toolbar=no,location=no,directories=no,status=no,dependent=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no,width=580,height=400')
+  brsWin.browseTarget = element
+}
+</SCRIPT>
+
+
+
+<link rel="stylesheet" type="text/css" src="http://w3.ibm.com/ui/v8/css/v4-scre
+en.css"></link>
+<LINK REL="stylesheet" TYPE="text/css" HREF="/gsadoc/gsa.css"></LINK>
+<STYLE TYPE="text/css" MEDIA="all">
+  html,body     {min-width:400px;}
+  table.basic-table { width: 400 }
+</STYLE>
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+function submittedForm(form){
+
+  var src = ""
+  var src2 = ""
+  var src3 = ""
+  var dest = ""
+
+  src   = form.PWSUploadSource.value
+  src2  = form.PWSUploadSrc2.value
+  src3  = form.PWSUploadSrc3.value
+  dest = form.PWSUploadTarget.value
+
+  if (( src == "" )&&( src2 =="" )&&( src3 =="" )) {
+     alert("All of the local source pathname fields are empty. Please enter a valid path.")
+     return false;
+  }
+
+  if ( dest == "" ) {
+     alert("The upload target pathname is empty. Please enter a valid GSA path.")
+     return false;
+  }
+
+  var pattern = /.htaccess$/
+
+  if ( dest.match(pattern) ) {
+     alert("You are not allowed to overwrite the .htaccess file.")
+     return false;
+  }
+
+  var top = /^\//
+
+  if ( !dest.match(top) ) {
+     alert("The target path must start with '/'.")
+     return false;
+  }
+
+  var testdot1 = /\/\.\.$/
+  results = testdot1.test(dest)
+
+  var testdot2 = /\/\.\.\//
+  results2 = testdot2.test(dest)
+
+  var testdot3 = /\/\.\//
+  results3 = testdot3.test(dest)
+
+  var testdot4 = /\/\.$/
+  results4 = testdot4.test(dest)
+
+  if ( results || results2 || results3 || results4 ) {
+     alert("You may not use relative paths (eg. '..') for the destination path.")
+     return false;
+  }
+
+  var doc = parent.ausgsaTWStatus.document;
+  doc.open();
+  doc.write('<html><body bgcolor=green text=white topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0"><B>Upload request initiated. Please wait for the results message.</B></html>');
+  doc.close();
+
+//  setCookie("file1", form.PWSUploadSource.value)
+//  setCookie("file2", form.PWSUploadSrc2.value)
+//  setCookie("file3", form.PWSUploadSrc3.value)
+
+
+    return true;
+}
+function submitButton(form){
+    if(submittedForm(form))
+    form.submit();
+}
+
+</SCRIPT>
+
+
+<FORM ACTION=../backend/upload.cgi METHOD=Post ENCTYPE=multipart/form-data ONSUBMIT="javascript:return submittedForm(document.forms.GSAToolForm)" TARGET=ausgsaTaskWin NAME=GSAToolForm>
+
+<BR>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<TR ALIGN=RIGHT><td> </TD></TR>
+<TR ALIGN=CENTER><td>
+  <SPAN CLASS="heading">Upload File</SPAN>
+</TD></TR>
+</TABLE>
+<BR>
+<TABLE CLASS="basic-table" BORDER=0 CELLSPACING=2 CELLPADDING=2>
+  <TR CLASS="even">
+    <TD ALIGN=LEFT VALIGN=CENTER WIDTH=400><TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5><TR><TD align=left><B>GSA Target Folder:</B> /gsa/ausgsa/projects/c/csat/</TD></TR><TR><TD align=left>(Choose up to 3 files to upload)</TD></TR><TR><TD align=left><UL><B><FONT COLOR=red SIZE=-1>Please note: This tool is suitable for uploading files less than 10 megabytes in size. If you wish to upload larger files, please use another protocol, such as FTP.</FONT></B></UL></TD></TR><TR><TD align=left><INPUT TYPE=hidden NAME=PWSUploadTarget VALUE="/gsa/ausgsa/projects/c/csat"><B>Local File 1:</B><BR><INPUT TYPE=file NAME=PWSUploadSource SIZE=20></TD></TR><TR><TD align=left><B>Local File 2:</B><BR><INPUT TYPE=file NAME=PWSUploadSrc2  SIZE=20></TD></TR><TR><TD align=left><B>Local File 3:</B><BR><INPUT TYPE=file NAME=PWSUploadSrc3 SIZE=20></TD></TR></TABLE></TD>
+  </TR>
+  <TR>
+    <TD ALIGN=CENTER COLSPAN=2>
+         <span class="button-blue"><input type="button" value="Submit" onClick="submitButton(document.forms.GSAToolForm)"></span>
+
+         <span class="button-blue"><input type="button" value="Cancel" onclick="top.close()"></span>
+
+    </TD>
+  </TR>
+</TABLE>
+</FORM>
+<SCRIPT LANGUAGE="JavaScript1.2">
+//  this_file1 = getCookie("file1")
+//  this_file2 = getCookie("file2")
+//  this_file3 = getCookie("file3")
+//  alert (document.forms.GSAToolForm.PWSUploadSrc2);
+//  document.forms.GSAToolForm.PWSUploadSource.value = this_file1
+//  document.forms.GSAToolForm.PWSUploadSrc2.value = this_file2
+//  document.forms.GSAToolForm.PWSUploadSrc3.value = this_file3
+//  document.forms.GSAToolForm.PWSUploadSrc4.value = this_file2
+
+  var newn = "/gsa/ausgsa/projects/c/csat/"
+//  alert("/gsa/ausgsa/projects/c/csat/")
+
+  var tstdot1 = /\/\.\.$/
+  rsults = tstdot1.test(newn)
+
+  var tstdot2 = /\/\.\.\//
+  rsults2 = tstdot2.test(newn)
+
+  var tstdot3 = /\/\.\//
+  rsults3 = tstdot3.test(newn)
+
+  var tstdot4 = /\/\.$/
+  rsults4 = tstdot4.test(newn)
+
+  if ( rsults || rsults2 || rsults3 || rsults4 ) {
+     alert("You may not use relative paths (eg. '..') for the destination path.")
+     // return false;
+  }
+
+
+</SCRIPT>
+
+</CENTER>
+<!--END CONTENT SHELL-->
+</body>
+</html>

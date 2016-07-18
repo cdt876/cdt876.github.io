@@ -1,0 +1,136 @@
+<!DOCTYPE PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <title>GSA File Manager</title>
+
+        <!--BEGIN STYLESHEET/SCRIPT-->
+        <!--LOAD THREE STYLESHEETS, 1 COMMON, 1 FOR NETSCAPE, 1 FOR IE-->
+<!--        <link rel="stylesheet" type="text/css" href="/images/w3/v6/css/w3_common.css" />
+        <link rel="stylesheet" type="text/css" href="/images/w3/v6/css/w3_netscape.css" disabled />
+-->
+        <script language="JavaScript1.2" type="text/javascript">
+        <!--
+//                if (document.all) document.createStyleSheet("/images/w3/v6/css/w3_ie.css");
+        //-->
+        </script>
+        <!--END STYLESHEET/SCRIPT-->
+</head>
+
+<body bgcolor="#FFFFFF" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0">
+
+<!--BEGIN CONTENT SHELL-->
+<CENTER>
+                        <script type="text/javaScript" src="/ui/v8/scripts/scripts.js"></script>
+<SCRIPT SRC="/gsatools/Cookies.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+function getBrowse(element) {
+  var brsWin = window.open('', 'ausgsaBrowseTop', 'toolbar=no,location=no,directories=no,status=no,dependent=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no,width=580,height=400')
+  brsWin.browseTarget = element
+}
+</SCRIPT>
+
+
+
+<link rel="stylesheet" type="text/css" src="http://w3.ibm.com/ui/v8/css/v4-scre
+en.css"></link>
+<LINK REL="stylesheet" TYPE="text/css" HREF="/gsadoc/gsa.css"></LINK>
+<STYLE TYPE="text/css" MEDIA="all">
+  html,body     {min-width:400px;}
+  table.basic-table { width: 400 }
+</STYLE>
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+function submittedForm(form){
+
+  var path = ""
+  var mailadd = ""
+
+  path = form.PWSSendURLPath.value
+  mailadd = form.PWSSendURLEmail.value
+
+  if ( path == "" ) {
+     alert("The GSA pathname is empty. Please enter a valid path.")
+     return false;
+  }
+
+  if ( mailadd == "" ) {
+     alert("The e-mail address is empty. Please enter a valid e-mail address.")
+     return false;
+  }
+
+  if ( mailadd.match(/\\/) || !mailadd.match(/.+\@.+\..+/) || mailadd.match(/;/) ) {
+     alert("Malformed e-mail address. Please enter a valid address of the form 'xxx@domain.com'.");
+     return false;
+  }
+
+  var top = /^\//
+  var top = /^http:\/\//
+
+  if ( !path.match(top) ) {
+     alert("The source path must start with 'http://'.")
+     return false;
+  }
+
+  var testdot1 = /\/\.\.$/
+  results = testdot1.test(path)
+
+  var testdot2 = /\/\.\.\//
+  results2 = testdot2.test(path)
+
+  var testdot3 = /\/\.\//
+  results3 = testdot3.test(path)
+
+  var testdot4 = /\/\.$/
+  results4 = testdot4.test(path)
+
+  if ( results || results2 || results3 || results4 ) {
+     alert("You may not use relative paths (eg. '..') for this tool.")
+     return
+  }
+
+
+    return true;
+}
+function submitButton(form){
+    if(submittedForm(form))
+    form.submit();
+}
+
+</SCRIPT>
+
+<P ALIGN="center"><a class="popup-link" style="text-align:left" href="javascript:popup('/gsadoc/help/popup-sendurl.html','internal',500,400)">Quick Help</a></P>
+<FORM ACTION=../backend/sendurl.cgi METHOD=Post ENCTYPE=application/x-www-form-urlencoded ONSUBMIT="javascript:return submittedForm(document.forms.GSAToolForm)" TARGET=ausgsaTaskWin NAME=GSAToolForm>
+
+<BR>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<TR ALIGN=RIGHT><td> </TD></TR>
+<TR ALIGN=CENTER><td>
+  <SPAN CLASS="heading">Send URL</SPAN>
+</TD></TR>
+</TABLE>
+<BR>
+<TABLE CLASS="basic-table" BORDER=0 CELLSPACING=2 CELLPADDING=2>
+  <TR CLASS="even">
+    <TD ALIGN=LEFT VALIGN=CENTER WIDTH=400><TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5><TR><TD align=left>Path to file or directory:<BR><INPUT TYPE=text NAME=PWSSendURLPath SIZE=35 VALUE="http://ausgsa.ibm.com/projects/c/csat"></TD></TR><TR><TD align=left>E-mail address(es) [xxx@domain.com,<br> separate with commas]:<BR><INPUT TYPE=text NAME=PWSSendURLEmail SIZE=35></TD></TR><TR><TD align=left>Message to include in e-mail:<BR><TEXTAREA NAME=PWSSendURLMessage ROWS=3 COLS=35></TEXTAREA></TD></TR></TABLE></TD>
+  </TR>
+  <TR>
+    <TD ALIGN=CENTER COLSPAN=2>
+         <span class="button-blue"><input type="button" value="Submit" onClick="submitButton(document.forms.GSAToolForm)"></span>
+
+         <span class="button-blue"><input type="button" value="Cancel" onclick="top.close()"></span>
+
+    </TD>
+  </TR>
+</TABLE>
+</FORM>
+<SCRIPT LANGUAGE="JavaScript1.2">
+
+</SCRIPT>
+
+</CENTER>
+<!--END CONTENT SHELL-->
+</body>
+</html>
