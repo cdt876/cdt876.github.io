@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="table.css">
   </head>
-
   <body>
-<center>
+  <center>
     <table class="modify">
   <thead>
     <tr>
@@ -31,7 +30,7 @@
     <TD DATA-LABEL="Remove User/Group" CLASS="datalight">n/a</TD>
   </TR>
 
-<TR ALIGN=CENTER CLASS="even">
+  <TR ALIGN=CENTER CLASS="even">
   <TD CLASS="data" DATA-LABEL="Type">Owner Group</TD>
   <TD DATA-LABEL="Name" ALIGN=LEFT CLASS="datalight">fdemarco</TD>
    <TD DATA-LABEL="Read"><INPUT  TYPE=checkbox NAME=owner_r checked VALUE=r></TD>
@@ -39,9 +38,9 @@
     <TD DATA-LABEL="Execute"><INPUT  TYPE=checkbox NAME=owner_x checked VALUE=x></TD>
     <TD DATA-LABEL="Control"><INPUT  TYPE=checkbox NAME=owner_c checked VALUE=c></TD>
     <TD DATA-LABEL="Remove User/Group" CLASS="datalight">n/a</TD>
-</TR>
+  </TR>
 
-<TR ALIGN=CENTER CLASS="odd">
+  <TR ALIGN=CENTER CLASS="odd">
   <TD  CLASS="data" DATA-LABEL="Type">Other</TD>
   <TD  DATA-LABEL="Name" ALIGN=LEFT CLASS="datalight">World</TD>
    <TD DATA-LABEL="Read"><INPUT  TYPE=checkbox NAME=owner_r checked VALUE=r></TD>
@@ -49,7 +48,7 @@
     <TD DATA-LABEL="Execute"><INPUT  TYPE=checkbox NAME=owner_x checked VALUE=x></TD>
     <TD DATA-LABEL="Control"><INPUT  TYPE=checkbox NAME=owner_c checked VALUE=c></TD>
     <TD DATA-LABEL="Remove User/Group" CLASS="datalight">n/a</TD>
-</TR>
+  </TR>
 
 <TR ALIGN=CENTER CLASS="even">
   <TD CLASS="data" DATA-LABEL="Type">Mask</TD>
@@ -89,13 +88,10 @@
     <TD DATA-LABEL="Control"><INPUT  TYPE=checkbox NAME=owner_c checked VALUE=c></TD>
     <TD DATA-LABEL="Remove User/Group" CLASS="datalight">n/a</TD>
 </TR>
-
-  </TR>
-    
+</TR>
   </tbody>
 </table> 
 </center> 
-
 <center>
 
 <br>
@@ -103,16 +99,16 @@
   <TR>
     <TD ALIGN=CENTER VALIGN=CENTER><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=1><TR>
       <TD align=left BORDER=5><TR ALIGN=LEFT>
-        <TD><INPUT TYPE=checkbox NAME=object_acls CHECKED VALUE=yes>Edit Current Path ACLs</TD>
-        <TD><INPUT CHECKED type=radio name=acl_ffonly value=both>Change Files and Folders</TD></TR>
+        <TD><INPUT TYPE=checkbox NAME=object_acls CHECKED VALUE=yes> Edit Current Path ACLs</TD>
+        <TD><INPUT CHECKED type=radio name=acl_ffonly value=both> Change Files and Folders</TD></TR>
         <TR ALIGN=LEFT>
-        <TD><INPUT TYPE=checkbox NAME=default_acls CHECKED VALUE=yes>Edit Inheritance ACLs</TD>
-    <TD><INPUT type=radio name=acl_ffonly value=folders_only>Change Folders Only</TD></TR><TR ALIGN=LEFT>
-    <TD><INPUT TYPE=radio NAME=recurse_acls CHECKED VALUE=no>No Recursion</TD>
-    <TD><INPUT type=radio name=acl_ffonly value=files_only>Change Files Only</TD></TR><TR ALIGN=LEFT>
-    <TD><INPUT TYPE=radio NAME=recurse_acls VALUE=level1>Edit Contents of Current Folder</TD></TR><TR ALIGN=LEFT>
-    <TD><INPUT TYPE=radio NAME=recurse_acls VALUE=yes>Recurse sub-folders</TD>
-    <TD><INPUT TYPE=checkbox NAME=chng_elements VALUE=yes>Change Only Modified Elements?</TD></TR></TD></TR><TR>
+        <TD><INPUT TYPE=checkbox NAME=default_acls CHECKED VALUE=yes> Edit Inheritance ACLs</TD>
+    <TD><INPUT type=radio name=acl_ffonly value=folders_only> Change Folders Only</TD></TR><TR ALIGN=LEFT>
+    <TD><INPUT TYPE=radio NAME=recurse_acls CHECKED VALUE=no> No Recursion</TD>
+    <TD><INPUT type=radio name=acl_ffonly value=files_only> Change Files Only</TD></TR><TR ALIGN=LEFT>
+    <TD><INPUT TYPE=radio NAME=recurse_acls VALUE=level1> Edit Contents of Current Folder</TD></TR><TR ALIGN=LEFT>
+    <TD><INPUT TYPE=radio NAME=recurse_acls VALUE=yes> Recurse sub-folders</TD>
+    <TD><INPUT TYPE=checkbox NAME=chng_elements VALUE=yes> Change Only Modified Elements?</TD></TR></TD></TR><TR>
     <TD align=left BORDER=5><SCRIPT SRC="/gsatools/Lookup.js"></SCRIPT></TD></TR></TABLE></TD>
   </TR>
   <TR>
@@ -129,15 +125,12 @@
 // -->
    </SCRIPT>
 
-
    <span class="button"><input type="button" value="Cancel" onclick="resetButton(document.forms.GSAToolForm)"></span>
 <!--   <A HREF="javascript:resetButton(document.forms.GSAToolForm)"><IMG BORDER=0 NAME="cancelimg" WIDTH="60" HEIGHT="25" ALT="Cancel" TITLE="Cancel"></A> -->
 
     </TD>
   </TR>
 </TABLE>
-
-
 
 </center>
 
