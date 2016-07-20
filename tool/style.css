@@ -11,6 +11,7 @@ body {
     padding: 0 15px;
     height: 568px;
     background-color: white;
+    overflow:hidden;
 
 }
 
@@ -284,7 +285,7 @@ abbr[title] {
 
         position: inherit;
         margin: 0 0 0 250px;
-        padding: 0 30px;
+        padding: 0 0px;
         border-left: 1px solid #e7e7e7;
       
     }
