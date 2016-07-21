@@ -1,5 +1,10 @@
-  body {
+    body {
     font-family: arial;
+
+  }
+
+  .modify th, .modify td{
+    text-align: center;
   }
 
 @media screen and (min-width: 568px) {
@@ -15,6 +20,7 @@
   .modify thead {
       background-color: #038ca5;
       color: white;
+      text-align: center;
   }
 
   .modify th, .modify td {
@@ -30,11 +36,11 @@
     min-width: 10px;
   }
  .modify td:first-child,th:first-child {
-    padding-left: 10px;
+    padding-left: 4px;
   }
 
   .modify th:last-child {
-    padding-right: 10px;
+    padding-right: 4px;
   }
  }
   .data {
@@ -56,11 +62,13 @@
     background-color: #dfeaf0;
   }
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 600px) {
 
     .modify {
      border: 1px solid #038ca5; 
-      width: 100%;
+     width: 80%;
+     height: 70%;
+     text-align: center;
 
     }
 
@@ -68,6 +76,7 @@
       display: none;
       background-color: blue;
       color: white;
+      text-align: center;
     }
 
     .modify tr {
