@@ -1,271 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
 
-  <head>
+    <!-- css -->
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!-- font awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-    <title>Key</title>
+    <!-- prevent zooming on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+<body>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <div class="container">
+    <div class="row">
 
-    <!-- Custom fonts for this template -->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <div class="col-sm-5">
+            <h2 style="text-align: center;">Carlos Trejo</h2>
+            <hr />
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+            <img class="profilePic" src="assets/carlos.jpg" />
 
-    <!-- Custom styles for this template -->
-    <link href="css/new-age.min.css" rel="stylesheet">
+            <div class="resource_container">
+                <div>
+                    <a id="github" class="resource fa fa-github-alt" href="https://github.com/cdt876" target="_blank"></a>
+                    <a href="https://github.com/cdt876" target="_blank"> Github</a>
+                </div>
+                <div>
+                    <a id="resume" class="resource fa fa-file-text-o" href="CarlosTrejoResume.pdf" target="_blank"></a>
+                    <a href="CarlosTrejoResume.pdf" target="_blank"> Resume</a>
+                </div>
+                <div>
+                    <a id="linkedin" class="resource fa fa-linkedin" href="https://linkedin.com/in/carlostrejomtz" target="_blank"></a>
+                    <a href="https://linkedin.com/in/carlostrejomtz" target="_blank"> LinkedIn</a>
+                </div>
+            </div>
 
-    <link rel="icon" type="image/png" href="img/key.png">
+            <div class="introParagraph">
+                <p>Computer Sciencist + Economist</p>
+                <p>University of Texas at Austin</p>
+                <p>Software Developer @ IBM</p>
+                <p><a href="mailto:ctrjmtz@gmail.com" target="_top">Contact</a></p>
+            </div>
 
-  </head>
-
-  <body id="page-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">RealTalk</a> -->
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#features">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
         </div>
-      </div>
-    </nav>
 
-    <header class="masthead">
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-lg-7 my-auto">
-            <div class="header-content mx-auto">
-              <!-- <h1 class="mb-5" style="font-family: Permanent Marker; font-size: 90px">RealTalk</h1> -->
-              <img src="img/weblogo.jpg" class="img-fluid" alt="" width="320px">
-              <br><br>
-              <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Learn More!</a><br><br>
-              <!-- <a target="_blank" href="https://docs.google.com/presentation/d/1fAjDxLY69L1_rxoO1W0sQsLt0-lraJ3KrSEs-qYuVo0/edit?usp=sharing" class="btn btn-outline btn-xl js-scroll-trigger">RealTalk Business Model</a> -->
+        <div class="col-sm-7">
+            <h2 style="text-align: center;">Work + Internships</h2>
+            <hr />
+
+            <div class="projectCircle">
+                <a class="projectTile" href="projects/contentAwareResize.html">
+                    <img class="projectThumbnail" src="assets/ibmFT/ibm.jpg" />
+                </a>
+                <p><a class="projectTextLink" href="projects/contentAwareResize.html">Software Developer</a></p>
             </div>
-          </div>
-          <div class="col-lg-5 my-auto">
-            <div class="device-container">
-              <div class="device-mockup iphone6_plus portrait black">
-                <div class="device">
-                  <div class="screen">
-                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                    <img src="img/profilespic.jpg" class="img-fluid" alt="">
-                  </div>
-                  <div class="button">
-                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                  </div>
-                </div>
-              </div>
+
+            <div class="projectCircle">
+                <a class="projectTile" href="projects/pacman.html">
+                    <img class="projectThumbnail" src="assets/Pacman/pacman_homepage.png" />
+                </a>
+                <p><a class="projectTextLink" href="projects/pacman.html">Information Technology Intern</a></p>
             </div>
-          </div>
+            <div class="projectCircle">
+                <a class="projectTile" href="projects/pacman.html">
+                    <img class="projectThumbnail" src="assets/zello/zello.png" />
+                </a>
+                <p><a class="projectTextLink" href="projects/pacman.html">Zello</a></p>
+            </div>
         </div>
-      </div>
-    </header>
+        <div class="col-sm-7">
+            <h2 style="text-align: center;">Projects</h2>
+            <hr />
 
-    <section class="download bg-primary text-center" id="download">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <h2 class="section-heading">Discover what Key is all about!</h2>
-            <p>Key is available on any android device! Download now to get started!</p>
-            <div class="badges">
-              <a class="badge-link" href="https://play.google.com/store/apps/details?id=key.app"><img src="img/google-play-badge.svg" alt=""></a>
+            <div class="projectCircle">
+                <a class="projectTile" href="projects/contentAwareResize.html">
+                    <img class="projectThumbnail" src="assets/key/appicon.png" />
+                </a>
+                <p><a class="projectTextLink" href="projects/contentAwareResize.html">Key (Android App)</a></p>
             </div>
-          </div>
+
+            <div class="projectCircle">
+                <a class="projectTile" href="projects/pacman.html">
+                    <img class="projectThumbnail" src="assets/Pacman/pacman_homepage.png" />
+                </a>
+                <p><a class="projectTextLink" href="projects/pacman.html">Exercise Predictor</a></p>
+            </div>
         </div>
-      </div>
-</section>
+        <div class="col-sm-7" style="float:right;">
+            <h2 style="text-align: center;">Certificates</h2>
+            <hr />
 
-    <section class="features" id="features">
-      <div class="container">
-        <div class="section-heading text-center">
-          <h2>Share your social media all at once!</h2>
-          <p class="text-muted">Check out what you can do with Key!</p>
-          <hr>
+            <div class="projectCircle">
+                <a class="projectTile" href="projects/visualSearch.html">
+                    <img class="projectThumbnail" src="assets/MachineLearning/mlcertificate.png" />
+                </a>
+                <p><a class="projectTextLink" href="projects/visualSearch.html">Machine Learning</a></p>
+            </div>
+
+            <!-- <div class="projectCircle">
+                <a class="projectTile" href="projects/contentAwareResize.html">
+                    <img class="projectThumbnail" src="assets/ContentAwareResizing/karst_many_seams.png" />
+                </a>
+                <p><a class="projectTextLink" href="projects/contentAwareResize.html">Game Theory</a></p>
+            </div> -->
+
         </div>
-        <div class="row">
-          <div class="col-lg-4 my-auto">
-            <div class="device-container">
-              <div class="device-mockup iphone6_plus portrait white">
-                <div class="device">
-                  <div class="screen">
-                    <img src="img/keycodes.jpg" class="img-fluid" alt="">
-                  </div>
-                  <div class="button">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-8 my-auto">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="fa fa-qrcode text-primary"></i>
-                    <h3>Create Keycodes</h3>
-                    <p class="text-muted">Create personalized Keycodes with the social medias of your choice!</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-frame text-primary"></i>
-                    <h3>Scan it!</h3>
-                    <p class="text-muted">Scan a Key Code to get the social media invite notifications!</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="feature-item">
-                    <i class="icon-user-follow text-primary"></i>
-                    <h3>Expand your Social Network</h3>
-                    <p class="text-muted">Connect with anyone. On every social media. Instantly!</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
+    </div>
 
-
-    <section class="cta">
-      <div class="cta-content">
-        <div class="container">
-          <h2>Stop waiting.<br>Start sharing.</h2>
-          <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
-        </div>
-      </div>
-      <div class="overlay"></div>
-    </section>
-
-
-    <!-- Team -->
-        <section class="bg-light" id="team">
-          <div class="container text-center">
-            <div class="row">
-              <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Team</h2>
-                <br>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="team-member">
-                  <img class="mx-auto rounded-circle" src="img/carlos.jpg" alt="" width="180px">
-                  <h4>Carlos Trejo</h4>
-                  <p class="text-muted">Founder &amp; Web Developer</p>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="team-member">
-                  <img class="mx-auto rounded-circle" src="img/nathan.jpg" alt="" width="180px">
-                  <h4>Nathan Chapman</h4>
-                  <p class="text-muted">Founder &amp; Android Developer</p>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="team-member">
-                  <img class="mx-auto rounded-circle" src="img/tori.jpg" alt="" width="180px">
-                  <h4>Tori Martinez</h4>
-                  <p class="text-muted">Marketing</p>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="team-member">
-                  <img class="mx-auto rounded-circle" src="img/megan.jpg" alt="" width="180px">
-                  <h4>Megan Goldstein</h4>
-                  <p class="text-muted">Graphic Designer</p>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="team-member">
-                  <img class="mx-auto rounded-circle" src="img/juan.jpg" alt="" width="180px">
-                  <h4>Juan Trejo</h4>
-                  <p class="text-muted">Co-Founder &amp; iOS Developer</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-    <section class="contact bg-primary" id="contact">
-      <div class="container">
-        <h2>We
-          <i class="fa fa-heart"></i>
-          new friends!</h2>
-        <ul class="list-inline list-social">
-          <li class="list-inline-item social-facebook">
-            <a target="_blank" href="https://www.facebook.com/KeyAppEnglish/">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-instagram">
-            <a target="_blank" href="https://www.instagram.com/key.social/">
-              <i class="fa fa-instagram"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-twitter">
-            <a target="_blank" href="https://twitter.com/KeyCodesApp/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-google-plus">
-            <a target="_blank" href="mailto:keycodeapp@gmail.com">
-              <i class="fa fa-envelope"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-<style>
-
-</style>
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/new-age.min.js"></script>
-
-    <script>
-    function myFunction() {
-      alert("Thanks for downloading RealTalk!");
-    }
-    </script>
-
-  </body>
-
+</body>
 </html>
