@@ -72,6 +72,8 @@ figure {
   float: left;
   width: 300px;
   position: fixed;
+  top: 0;
+  bottom: 0;
   overflow-y: scroll;
   z-index: 1001;
   background: #f2f3f7;
